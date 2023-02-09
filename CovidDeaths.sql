@@ -29,6 +29,11 @@ Where continent is not null
 Group by Location, Population
 order by PercentPopulationInfected desc
 
+Select Location, Population,date, MAX(total_cases) as HighestInfectionCount,  Max((total_cases/population))*100 as PercentPopulationInfected
+From PortfolioProject..CovidDeaths
+Group by Location, Population, date
+order by PercentPopulationInfected desc
+
 Select Location, MAX(cast(Total_deaths as int)) as TotalDeathCount
 From PortfolioProject..CovidDeaths
 Where continent is not null 
