@@ -72,4 +72,3 @@ From PortfolioProject..CovidDeaths
 where continent is not null 
 --Group By date
 order by 1,2
-
